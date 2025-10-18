@@ -1,9 +1,6 @@
 #Script de função de contagem de acordes em músicas
 def Acordes():
-    dici = {
-        "genero": "",
-        "acordes": {}
-    }
+    dici = { "genero": "", "acordes": {} }
 
     GeneroMusical = input("Qual o genêro musical: ")
     dici["genero"] = GeneroMusical
@@ -30,48 +27,50 @@ def Acordes():
             
     return dici
 
+def VisualizaRegistro(dici):
+    print(f"- | {dici["genero"]} | -")
+    print("-------------------------\n| Nº  Acordes | Acordes |\n-------------------------")
+
+    for chave, valor in dici["acordes"].items():
+        print(f"| {chave} | {valor} |")
+
+    print("-------------------------")
+
 lista_acordes = []
 sistema = True
 
 print("---------------------------------\n| Sistema de Contagem de Acorde |\n---------------------------------")
 while sistema:
-    print("- Tecle 1 para registrar acordes\n- Tecle 2 para visualizar registro\n- Tecle F para finalizar sistema")
+    print("- Tecle 1 para registrar acordes\n- Tecle 2 para visualizar registros\n- Tecle F para finalizar sistema")
     usuario = input("> ")
     match usuario.lower():
         case "1":
             registro = Acordes()
             lista_acordes.append(registro)
             print("Acordes registrados!")
-            print(registro)
+            VisualizaRegistro(registro)
+            print(" ")
+
         case "2":
-            print(12)
+            for id in range(0, len(lista_acordes)):
+                print(f"{id+1} - {lista_acordes[id]["genero"]}")
+            print("Tecle T para ver todos os registros")
+
+            Resposta = input("Número do Registro: ")
+            if Resposta.lower() == "t":
+                for reg in lista_acordes:
+                    print(" ")
+                    VisualizaRegistro(reg)
+            else:
+                print(" ")
+                VisualizaRegistro(lista_acordes[(int(Resposta)-1)])
+            print(" ")
+
         case "f":
             sistema = False
             print("| Sistema de contagem finalizado |")
+            print(lista_acordes)
+
         case _:
             print("Resposta invalida. Tente novamente.")
-            
-    
-
-
-
-'''
-def VisualizaRegistro(lista):
-    for x in lista:
-        print(f"- {x["genero"]}")
-
-    for dicio in lista:
-        print(f"| {dicio["genero"]} |")
-        for chave, valor in dicio["acordes"].items():
-            print(f"| {chave} | {valor} |")
-
-#Acordes()
-
-lista = [
-    {
-        "genero": "Folk",
-        "acordes": {"a":1, "b":2, "c":3}
-    }
-]
-VisualizaRegistro(lista)
-'''
+            print(" ")
