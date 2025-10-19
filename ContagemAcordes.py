@@ -10,6 +10,8 @@ def Acordes():
         print("Campo vazio. Resposta invalida. Digite novamente.")
         Vezes = input("Quantidade de registros: ")
 
+    lista_complimento = []
+
     for x in range(0, int(Vezes)):
         Acordes = input("Liste os acordes, separdos por virgula: ")
         if Acordes == " " or Acordes == "":
@@ -19,12 +21,15 @@ def Acordes():
         Acordes = Acordes.replace(" ", "")
         Acordes = Acordes.split(",")
 
+        lista_complimento.append(len(Acordes))
+
         for acorde in Acordes:
             if not acorde in dici["acordes"]:
                 dici["acordes"][acorde] = 1
             elif acorde in dici["acordes"]:
                 dici["acordes"][acorde] = 1 + dici["acordes"][acorde]
-            
+
+    print(f"> Lista complimento das músicas: {str(lista_complimento)}") 
     return dici
 
 def VisualizaRegistro(dici):
