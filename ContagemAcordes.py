@@ -1,34 +1,46 @@
-#Script de função de contagem de acordes em músicas
+#Função de contagem de acordes em músicas
 def Acordes():
-    dici = { "genero": "", "acordes": {} }
+    #Dicionario que vai armazenas a contagem
+    dici = { "genero": "", "acordes": {} } 
 
+    #Nome do gênero músical que vai ser contado
     GeneroMusical = input("Qual o genêro musical: ")
     dici["genero"] = GeneroMusical
 
+    #Quantidade de contagens
     Vezes = input("Quantidade de registros: ")
     if Vezes == "" or Vezes == " ":
         print("Campo vazio. Resposta invalida. Digite novamente.")
         Vezes = input("Quantidade de registros: ")
 
+    #Lista que vai armazenar a quantidade de acordes em cada música
     lista_complimento = []
 
+    #Loop que vai se repetir o número de Vezes
     for x in range(0, int(Vezes)):
+        #Lista de acordes em cada música
         Acordes = input("Liste os acordes, separdos por virgula: ")
         if Acordes == " " or Acordes == "":
             print("Campo vazio. Resgistro invalido. Digite novamente.")
             Acordes = input("Liste os acordes, separdos por virgula: ")
 
+        #Transforma a string em lista
         Acordes = Acordes.replace(" ", "")
         Acordes = Acordes.split(",")
 
         lista_complimento.append(len(Acordes))
 
+        #Loop que pecorre a lista Acordes
         for acorde in Acordes:
+            #Se o acorde não estiver em dici, se cria uma chave do acorde com valor 1
             if not acorde in dici["acordes"]:
                 dici["acordes"][acorde] = 1
+
+            #Se o acorde estiver em dici, o valor da chave do acorde é incrementa o valor da chave e 1
             elif acorde in dici["acordes"]:
                 dici["acordes"][acorde] = 1 + dici["acordes"][acorde]
 
+    #A função retorna a lista de acordes em cada música e a contagem de acordes
     print(f"> Lista complimento das músicas: {str(lista_complimento)}") 
     return dici
 
