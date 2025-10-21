@@ -4,21 +4,14 @@ lista_quantiAcordes = [19, 7, 7, 17, 6, 8, 4, 8, 5,
     17, 9, 4, 6, 4, 4, 4, 5, 4, 5, 4, 4, 10, 13, 11, 13, 11, 
     5, 11, 9, 10, 8, 2, 12, 7, 4, 8, 3, 6, 6, 16, 13, 5, 23, 
     7, 10, 10, 19, 10, 5, 4, 5, 2, 2, 4, 7, 2, 1, 8, 6, 2, 4, 
-    7, 14, 8, 6, 10, 10, 6, 5, 8, 4]
+    7, 14, 8, 6, 10, 10, 6, 5, 8, 4] #Soma Quantidade de acordes em cada música: 935
 
 lista_quantiAcordes_ordenada = [1, 2, 2, 2, 2, 2, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 
     5, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 9, 9, 
     10, 10, 10, 10, 10, 10, 10, 10, 10, 11, 11, 11, 11, 12, 12, 12, 13, 13, 13, 13, 13, 14, 14, 15, 16, 17, 17, 19, 19, 
-    20, 20, 22, 22, 23, 23, 23, 25, 26, 26]
+    20, 20, 22, 22, 23, 23, 23, 25, 26, 26] #Soma Quantidade de acordes em cada música: 935
 
-#Soma Quantidade de acordes em cada música: 935
-
-num = 0
-for x in lista_quantiAcordes_ordenada:
-    num = int(x)+num
-print(num/100)
-
-Acordes = {
+AcordesContados = {
     'genero': 'Músicas diferentes', 
     'acordes': {
         'Ab': 6, 'Ab/Eb': 1, 'Am7': 22, 'Bb': 13, 'Bb/Ab': 1, 'Bb/C': 1, 'Bb/Eb': 1, 'C': 28, 'C/E': 4, 'C/F': 1, 'Cm': 9, 
@@ -49,7 +42,7 @@ Acordes = {
         }
     }
 
-Odenado_num = {'Ab/Eb': 1, 'Bb/Ab': 1, 'Bb/C': 1, 'Bb/Eb': 1, 'C/F': 1, 'Eb2': 1, 'G/A': 1, 'G/C': 1, 'G/F': 1, 'F/G': 1, 'C#/D#': 1, 'Cm7(5-)': 1, 'D#7': 1, 
+AcordesContados_Ordenados_num = {'Ab/Eb': 1, 'Bb/Ab': 1, 'Bb/C': 1, 'Bb/Eb': 1, 'C/F': 1, 'Eb2': 1, 'G/A': 1, 'G/C': 1, 'G/F': 1, 'F/G': 1, 'C#/D#': 1, 'Cm7(5-)': 1, 'D#7': 1, 
     'D#7(4)': 1, 'F#5+': 1, 'F#6': 1, 'F#7M(5+)': 1, 'F#7M(6)': 1, 'D9/F#': 1, 'G#7': 1, 'F6(9)': 1, 'G4/B': 1, 'E4/7(9)': 1, 'F#m/(11)': 1, 'G7m(6/9)': 1, 'D5+': 1, 
     'D6': 1, 'Em/F#': 1, 'Gm/Bb': 1, 'A9-': 1, 'Bbm6': 1, 'D7(9-/11+)': 1, 'Db7(9)': 1, 'Eb7(9)': 1, 'Em7(5-)': 1, 'G7(13)': 1, 'A7(9)': 1, 'A7M': 1, 'Ab7(11+)': 1, 
     'B7(9)': 1, 'Bb(11+)': 1, 'Am6': 1, 'B7(9-)': 1, 'C6(9)': 1, 'C7M(9)': 1, 'E7(9+)': 1, 'G7(4/9)': 1, 'G7(9-)': 1, 'F#11': 1, 'F#7(4/9)': 1, 'G°': 1, 'Am7(5-)': 1, 
@@ -70,17 +63,9 @@ Odenado_num = {'Ab/Eb': 1, 'Bb/Ab': 1, 'Bb/C': 1, 'Bb/Eb': 1, 'C/F': 1, 'Eb2': 1
     'E/G#': 4, 'Em7(9)': 4, 'F/A': 4, 'A9': 4, 'Bb9': 4, 'B4': 5, 'C#': 5, 'Ab': 6, 'C7M': 6, 'F#m7': 6, 'F7': 6, 'G#m7': 7, 'D9': 7, 'G#m': 7, 'A7': 7, 'C7': 7, 
     'G7M': 8, 'Dm7': 8, 'B': 8, 'C#m': 8, 'Gm7': 8, 'Cm': 9, 'G/B': 9, 'C9': 9, 'D7': 9, 'F7M': 10, 'Bm7': 10, 'C#m7': 10, 'B7': 10, 'D/F#': 10, 'Dm': 10, 'G7': 11, 
     'F#m': 11, 'E7': 12, 'F#': 12, 'Bb': 13, 'Gm': 15, 'Bm': 17, 'Em7': 18, 'F': 19, 'Am7': 22, 'Am': 22, 'E': 23, 'C': 28, 'A': 28, 'Em': 33, 'D': 34, 'G': 45}
-print(len(Odenado_num))
-
-num = 0
-for x2, x1 in Acordes['acordes'].items():
-    num = num + x1
-print(f"Quantidade de acordes analisados: {num}")
 
 
-print(f"Quantidade de tipos de acordes: {len(Acordes['acordes'])}") #<-- 293
-
-AcordesOrdenados = {
+AcordesContados_Ordenados_letra = {
     'A': 28, 'A#': 1, 'A#m': 2, 'A#m7': 2, 'A#m7(5-)': 1, 'A#m7(11)': 1, 'A11/C#': 1, 'A4': 2, 'A4(7/9)': 1, 'A5': 1, 'A7': 7, 'A7(11+)': 1, 'A7(13-)': 2, 'A7(4)': 1,
     'A7(4/9)': 2, 'A7(9)': 1, 'A7/4': 1, 'A7/5+': 1, 'A7M': 1, 'A7M(9)': 1, 'A9': 4, 'A9-': 1, 'A9/C#': 1, 'A/B': 1, 'A/C#': 2, 'A/E': 1, 'A/G': 1, 'Ab': 6, 'Ab/C': 1,
     'Ab/Eb': 1, 'Ab6': 1, 'Ab7': 1, 'Ab7(11+)': 1, 'Ab7+': 1, 'Abm': 2, 'Abm7': 7, 'Abm7(11)': 3, 'Am': 22, 'Am6': 1, 'Am7': 22, 'Am7(5-)': 1, 'Am7(9)': 3, 'Am7(9)/G': 1,
@@ -103,7 +88,7 @@ AcordesOrdenados = {
     'G/F': 1, 'G/b': 1, 'Gm': 15, 'Gm/Bb': 1, 'Gm6': 1, 'Gm7': 8, 'G°': 1
 }
 
-ordenado_num_letra = {'A#': 1, 'A#m7(5-)': 1, 'A#m7(11)': 1, 'A11/C#': 1, 'A4(7/9)': 1, 'A5': 1, 'A7(11+)': 1, 'A7(4)': 1, 'A7(9)': 1, 'A7/4': 1, 'A7/5+': 1, 
+AcordesContados_Ordenados_num_letra = {'A#': 1, 'A#m7(5-)': 1, 'A#m7(11)': 1, 'A11/C#': 1, 'A4(7/9)': 1, 'A5': 1, 'A7(11+)': 1, 'A7(4)': 1, 'A7(9)': 1, 'A7/4': 1, 'A7/5+': 1, 
     'A7M': 1, 'A7M(9)': 1, 'A9-': 1, 'A9/C#': 1, 'A/B': 1, 'A/E': 1, 'A/G': 1, 'Ab/C': 1, 'Ab/Eb': 1, 'Ab6': 1, 'Ab7': 1, 'Ab7(11+)': 1, 'Ab7+': 1, 'Am6': 1, 
     'Am7(5-)': 1, 'Am7(9)/G': 1, 'Am7/5-': 1, 'Am7/G': 1, 'Am7(b5)': 1, 'Am/G': 1, 'B4(7/9)': 1, 'B4/D#': 1, 'B5': 1, 'B7(13)': 1, 'B7(9)': 1, 'B7(9-)': 1, 
     'B7/9/11': 1, 'B7/A': 1, 'B7/D#': 1, 'B7+': 1, 'B9/D#': 1, 'B11': 1, 'B/E': 1, 'Bb(11+)': 1, 'Bb5': 1, 'Bb6': 1, 'Bb7/9': 1, 'Bb7+': 1, 'Bb/Ab': 1, 'Bb/C': 1, 
@@ -124,11 +109,4 @@ ordenado_num_letra = {'A#': 1, 'A#m7(5-)': 1, 'A#m7(11)': 1, 'A11/C#': 1, 'A4(7/
     'B4': 5, 'C#': 5, 'Ab': 6, 'C7M': 6, 'F#m7': 6, 'F7': 6, 'A7': 7, 'Abm7': 7, 'C7': 7, 'D9': 7, 'G#m': 7, 'G#m7': 7, 'B': 8, 'C#m': 8, 'Dm7': 8, 'G7M': 8, 'Gm7': 8, 
     'C9': 9, 'Cm': 9, 'D7': 9, 'G/B': 9, 'B7': 10, 'Bm7': 10, 'C#m7': 10, 'D/F#': 10, 'Dm': 10, 'F7M': 10, 'F#m': 11, 'G7': 11, 'E7': 12, 'F#': 12, 'Bb': 13, 'Gm': 15, 
     'Bm': 17, 'Em7': 18, 'F': 19, 'Am': 22, 'Am7': 22, 'E': 23, 'A': 28, 'C': 28, 'Em': 33, 'D': 34, 'G': 45}
-print(len(ordenado_num_letra))
 
-num = 0
-for x2, x1 in Acordes['acordes'].items():
-    num = num + x1
-print(f"Quantidade de acordes analisados: {num}")
-
-print(f"Quantidade de tipos de acordes: {len(AcordesOrdenados)}") #<-- 290
