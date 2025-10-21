@@ -1,5 +1,5 @@
 # Trabalho de Matemática
-Este repositorio foi criado para armazenar o script usado no trabalho de estatistica de Matemática.
+Este repositorio criado para armazenar scripts *Python* usado no trabalho de estatistica de Matemática.
 
 ## Sistema de contagem de Acordes
 Para o tema do trabalho escolhido foi *Número de acordes em músicas brasileiras tocadas no violão*, onde a pesquisa busca responder:
