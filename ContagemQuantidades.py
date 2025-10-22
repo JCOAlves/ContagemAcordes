@@ -17,3 +17,5 @@ for x in lista_quantiAcordes_ordenada:
 print(dici)
 
 print(lista_quantiAcordes_ordenada[49], lista_quantiAcordes_ordenada[50])
+
+

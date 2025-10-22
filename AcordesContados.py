@@ -110,3 +110,7 @@ AcordesContados_Ordenados_num_letra = {'A#': 1, 'A#m7(5-)': 1, 'A#m7(11)': 1, 'A
     'C9': 9, 'Cm': 9, 'D7': 9, 'G/B': 9, 'B7': 10, 'Bm7': 10, 'C#m7': 10, 'D/F#': 10, 'Dm': 10, 'F7M': 10, 'F#m': 11, 'G7': 11, 'E7': 12, 'F#': 12, 'Bb': 13, 'Gm': 15, 
     'Bm': 17, 'Em7': 18, 'F': 19, 'Am': 22, 'Am7': 22, 'E': 23, 'A': 28, 'C': 28, 'Em': 33, 'D': 34, 'G': 45}
 
+print(len(AcordesContados['acordes'])) # <-- 293
+print(len(AcordesContados_Ordenados_letra)) # <-- 290
+print(len(AcordesContados_Ordenados_num)) # <-- 293
+print(len(AcordesContados_Ordenados_num_letra)) # <-- 290
