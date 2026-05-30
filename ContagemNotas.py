@@ -1,41 +1,44 @@
 # sistema de contagem de respostas do ENEM
 
-def Contagem():
+def Contagem(ano):
     blocoAssunto = { 
         "nome": "", 
-        "ano": 0,
-        "respostas": { "a": 0, "b": 0, "c": 0, "d": 0, "e": 0 } 
+        "ano": ano,
+        "respostas": { "A": 0, "B": 0, "C": 0, "D": 0, "E": 0 },
+        "quantidadeRespostas": 0
     }
 
-    blocoAssunto["nome"] = input("Bloco de questões do ENEM: ")
-    blocoAssunto["ano"] = int(input("Ano de edição do ENEM: "))
+    lista = []
+    listaNomes = ["Linguagens", "Humanas", "Natureza", "Matematica"]
 
-    Respostas = input("Liste de respostas, separdas por virgula: ")
-    if Respostas == " " or Respostas == "":
-        print("Campo vazio. Resgistro invalido. Digite novamente.")
-        Respostas = input("Liste os acordes, separdos por virgula: ")
+    for x in listaNomes:
+        blocoAssunto["respostas"]["A"] = 0
+        blocoAssunto["respostas"]["B"] = 0
+        blocoAssunto["respostas"]["C"] = 0
+        blocoAssunto["respostas"]["D"] = 0
+        blocoAssunto["respostas"]["E"] = 0
+        blocoAssunto["quantidadeRespostas"] = 0
+        blocoAssunto["nome"] = x
+        print(blocoAssunto["nome"])
 
-    #Transforma a string em lista
-    Respostas = Respostas.lower()
-    Respostas = Respostas.replace(" ", "")
-    Respostas = Respostas.split(",")
+        Respostas = input("Liste de respostas, separdas por virgula: ")
+        if Respostas == " " or Respostas == "":
+            print("Campo vazio. Resgistro invalido. Digite novamente.")
+            Respostas = input("Liste os acordes, separdos por virgula: ")
 
-    for x in Respostas:
-        if x in blocoAssunto["respostas"]:
-            blocoAssunto["respostas"][f"{x}"] += 1
+        #Transforma a string em lista
+        Respostas = Respostas.split(" ")
+        
+        for z in Respostas:
+            if z in blocoAssunto["respostas"]:
+                blocoAssunto["respostas"][f"{z}"] += 1
+                blocoAssunto["quantidadeRespostas"] += 1
+        lista.append(blocoAssunto)
+        
+        print(f"> Lista complimento das músicas: {blocoAssunto["quantidadeRespostas"]}") 
+
+    return lista
     
-    print(f"> Lista complimento das músicas: {len(Respostas)}") 
-    return blocoAssunto
-    
-
-def VisualizaRegistro(dici):
-    print(f"- | {dici["nome"]} | -")
-    print("-------------------------\n| Resposta | Quantidade |\n-------------------------")
-
-    for chave, valor in dici["respostas"].items():
-        print(f"| {chave} | {valor} |")
-
-    print("-------------------------")
 
 listaRespostas = []
 sistema = True
@@ -46,26 +49,9 @@ while sistema:
     usuario = input("> ")
     match usuario.lower():
         case "1":
-            registro = Contagem()
+            ano = int(input("Ano de edição do ENEM: "))
+            registro = Contagem(ano)
             listaRespostas.append(registro)
-            print("Acordes registrados!")
-            VisualizaRegistro(registro)
-            print(" ")
-
-        case "2":
-            for id in range(0, len(listaRespostas)):
-                print(f"{id+1} - {listaRespostas[id]["nome"]} : {listaRespostas[id]["ano"]}")
-            print("Tecle T para ver todos os registros")
-
-            Resposta = input("Número do Registro: ")
-            if Resposta.lower() == "t":
-                for reg in listaRespostas:
-                    print(" ")
-                    VisualizaRegistro(reg)
-            else:
-                print(" ")
-                VisualizaRegistro(listaRespostas[(int(Resposta)-1)])
-            print(" ")
 
         case "f":
             sistema = False
@@ -75,3 +61,5 @@ while sistema:
         case _:
             print("Resposta invalida. Tente novamente.")
             print(" ")
+
+cont = []
