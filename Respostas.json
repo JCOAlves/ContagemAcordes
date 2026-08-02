@@ -1,35 +1,332 @@
 {
     "2025": {
-        "linguagens": 0, "humanas": 0, "natureza": 0, "matematica": 0
+        "linguagens": {
+            "A": 9,
+            "B": 11,
+            "C": 11,
+            "D": 10,
+            "E": 9
+        },
+        "humanas": {
+            "A": 8,
+            "B": 9,
+            "C": 9,
+            "D": 10,
+            "E": 9
+        },
+        "natureza": {
+            "A": 7,
+            "B": 10,
+            "C": 8,
+            "D": 10,
+            "E": 8
+        },
+        "matematica": {
+            "A": 8,
+            "B": 8,
+            "C": 10,
+            "D": 9,
+            "E": 9
+        }
     },
     "2024": {
-        "linguagens": 0, "humanas": 0, "natureza": 0, "matematica": 0
+        "linguagens": {
+            "A": 6,
+            "B": 9,
+            "C": 10,
+            "D": 15,
+            "E": 10
+        },
+        "humanas": {
+            "A": 9,
+            "B": 9,
+            "C": 9,
+            "D": 9,
+            "E": 9
+        },
+        "natureza": {
+            "A": 9,
+            "B": 8,
+            "C": 9,
+            "D": 9,
+            "E": 9
+        },
+        "matematica": {
+            "A": 8,
+            "B": 10,
+            "C": 11,
+            "D": 9,
+            "E": 7
+        }
     },
     "2023": {
-        "linguagens": 0, "humanas": 0, "natureza": 0, "matematica": 0
+        "linguagens": {
+            "A": 15,
+            "B": 9,
+            "C": 11,
+            "D": 7,
+            "E": 8
+        },
+        "humanas": {
+            "A": 14,
+            "B": 8,
+            "C": 8,
+            "D": 9,
+            "E": 6
+        },
+        "natureza": {
+            "A": 9,
+            "B": 8,
+            "C": 10,
+            "D": 10,
+            "E": 8
+        },
+        "matematica": {
+            "A": 8,
+            "B": 10,
+            "C": 9,
+            "D": 9,
+            "E": 8
+        }
     },
     "2022": {
-        "linguagens": 0, "humanas": 0, "natureza": 0, "matematica": 0
+        "linguagens": {
+            "A": 11,
+            "B": 10,
+            "C": 11,
+            "D": 8,
+            "E": 10
+        },
+        "humanas": {
+            "A": 11,
+            "B": 9,
+            "C": 8,
+            "D": 8,
+            "E": 9
+        },
+        "natureza": {
+            "A": 9,
+            "B": 9,
+            "C": 9,
+            "D": 9,
+            "E": 9
+        },
+        "matematica": {
+            "A": 8,
+            "B": 9,
+            "C": 11,
+            "D": 8,
+            "E": 8
+        }
     },
     "2021": {
-        "linguagens": 0, "humanas": 0, "natureza": 0, "matematica": 0
+        "linguagens": {
+            "A": 11,
+            "B": 11,
+            "C": 9,
+            "D": 13,
+            "E": 6
+        },
+        "humanas": {
+            "A": 11,
+            "B": 14,
+            "C": 6,
+            "D": 5,
+            "E": 9
+        },
+        "natureza": {
+            "A": 6,
+            "B": 13,
+            "C": 10,
+            "D": 9,
+            "E": 7
+        },
+        "matematica": {
+            "A": 6,
+            "B": 8,
+            "C": 11,
+            "D": 10,
+            "E": 9
+        }
     },
     "2020": {
-        "linguagens": 0, "humanas": 0, "natureza": 0, "matematica": 0
+        "linguagens": {
+            "A": 17,
+            "B": 9,
+            "C": 6,
+            "D": 8,
+            "E": 10
+        },
+        "humanas": {
+            "A": 4,
+            "B": 9,
+            "C": 11,
+            "D": 12,
+            "E": 9
+        },
+        "natureza": {
+            "A": 6,
+            "B": 5,
+            "C": 11,
+            "D": 16,
+            "E": 6
+        },
+        "matematica": {
+            "A": 8,
+            "B": 10,
+            "C": 15,
+            "D": 5,
+            "E": 6
+        }
     },
     "2019": {
-        "linguagens": 0, "humanas": 0, "natureza": 0, "matematica": 0
+        "linguagens": {
+            "A": 11,
+            "B": 11,
+            "C": 10,
+            "D": 10,
+            "E": 8
+        },
+        "humanas": {
+            "A": 9,
+            "B": 13,
+            "C": 11,
+            "D": 6,
+            "E": 6
+        },
+        "natureza": {
+            "A": 9,
+            "B": 9,
+            "C": 9,
+            "D": 9,
+            "E": 9
+        },
+        "matematica": {
+            "A": 8,
+            "B": 8,
+            "C": 10,
+            "D": 10,
+            "E": 9
+        }
     },
     "2018": {
-        "linguagens": 0, "humanas": 0, "natureza": 0, "matematica": 0
+        "linguagens": {
+            "A": 8,
+            "B": 15,
+            "C": 9,
+            "D": 9,
+            "E": 9
+        },
+        "humanas": {
+            "A": 4,
+            "B": 9,
+            "C": 9,
+            "D": 9,
+            "E": 14
+        },
+        "natureza": {
+            "A": 9,
+            "B": 9,
+            "C": 9,
+            "D": 9,
+            "E": 9
+        },
+        "matematica": {
+            "A": 10,
+            "B": 9,
+            "C": 8,
+            "D": 10,
+            "E": 7
+        }
     },
     "2017": {
-        "linguagens": 0, "humanas": 0, "natureza": 0, "matematica": 0
+        "linguagens": {
+            "A": 9,
+            "B": 11,
+            "C": 6,
+            "D": 13,
+            "E": 11
+        },
+        "humanas": {
+            "A": 8,
+            "B": 9,
+            "C": 8,
+            "D": 10,
+            "E": 10
+        },
+        "natureza": {
+            "A": 10,
+            "B": 8,
+            "C": 9,
+            "D": 9,
+            "E": 9
+        },
+        "matematica": {
+            "A": 8,
+            "B": 10,
+            "C": 9,
+            "D": 10,
+            "E": 8
+        }
     },
     "2016": {
-        "linguagens": 0, "humanas": 0, "natureza": 0, "matematica": 0
+        "linguagens": {
+            "A": 8,
+            "B": 8,
+            "C": 11,
+            "D": 11,
+            "E": 7
+        },
+        "humanas": {
+            "A": 8,
+            "B": 10,
+            "C": 10,
+            "D": 9,
+            "E": 8
+        },
+        "natureza": {
+            "A": 10,
+            "B": 14,
+            "C": 9,
+            "D": 7,
+            "E": 10
+        },
+        "matematica": {
+            "A": 8,
+            "B": 9,
+            "C": 10,
+            "D": 10,
+            "E": 8
+        }
     },
     "2015": {
-        "linguagens": 0, "humanas": 0, "natureza": 0, "matematica": 0
+        "linguagens": {
+            "A": 8,
+            "B": 11,
+            "C": 10,
+            "D": 11,
+            "E": 10
+        },
+        "humanas": {
+            "A": 9,
+            "B": 9,
+            "C": 9,
+            "D": 8,
+            "E": 10
+        },
+        "natureza": {
+            "A": 9,
+            "B": 9,
+            "C": 9,
+            "D": 9,
+            "E": 9
+        },
+        "matematica": {
+            "A": 9,
+            "B": 8,
+            "C": 10,
+            "D": 9,
+            "E": 9
+        }
     }
 }

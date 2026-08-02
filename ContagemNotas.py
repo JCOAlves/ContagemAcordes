@@ -1,65 +1,355 @@
-# sistema de contagem de respostas do ENEM
-
-def Contagem(ano):
-    blocoAssunto = { 
-        "nome": "", 
-        "ano": ano,
-        "respostas": { "A": 0, "B": 0, "C": 0, "D": 0, "E": 0 },
-        "quantidadeRespostas": 0
+respostasENEM = {
+    "2025": {
+        "linguagens": {
+            "A": 9,
+            "B": 11,
+            "C": 11,
+            "D": 10,
+            "E": 9
+        },
+        "humanas": {
+            "A": 8,
+            "B": 9,
+            "C": 9,
+            "D": 10,
+            "E": 9
+        },
+        "natureza": {
+            "A": 7,
+            "B": 10,
+            "C": 8,
+            "D": 10,
+            "E": 8
+        },
+        "matematica": {
+            "A": 8,
+            "B": 8,
+            "C": 10,
+            "D": 9,
+            "E": 9
+        }
+    },
+    "2024": {
+        "linguagens": {
+            "A": 6,
+            "B": 9,
+            "C": 10,
+            "D": 15,
+            "E": 10
+        },
+        "humanas": {
+            "A": 9,
+            "B": 9,
+            "C": 9,
+            "D": 9,
+            "E": 9
+        },
+        "natureza": {
+            "A": 9,
+            "B": 8,
+            "C": 9,
+            "D": 9,
+            "E": 9
+        },
+        "matematica": {
+            "A": 8,
+            "B": 10,
+            "C": 11,
+            "D": 9,
+            "E": 7
+        }
+    },
+    "2023": {
+        "linguagens": {
+            "A": 15,
+            "B": 9,
+            "C": 11,
+            "D": 7,
+            "E": 8
+        },
+        "humanas": {
+            "A": 14,
+            "B": 8,
+            "C": 8,
+            "D": 9,
+            "E": 6
+        },
+        "natureza": {
+            "A": 9,
+            "B": 8,
+            "C": 10,
+            "D": 10,
+            "E": 8
+        },
+        "matematica": {
+            "A": 8,
+            "B": 10,
+            "C": 9,
+            "D": 9,
+            "E": 8
+        }
+    },
+    "2022": {
+        "linguagens": {
+            "A": 11,
+            "B": 10,
+            "C": 11,
+            "D": 8,
+            "E": 10
+        },
+        "humanas": {
+            "A": 11,
+            "B": 9,
+            "C": 8,
+            "D": 8,
+            "E": 9
+        },
+        "natureza": {
+            "A": 9,
+            "B": 9,
+            "C": 9,
+            "D": 9,
+            "E": 9
+        },
+        "matematica": {
+            "A": 8,
+            "B": 9,
+            "C": 11,
+            "D": 8,
+            "E": 8
+        }
+    },
+    "2021": {
+        "linguagens": {
+            "A": 11,
+            "B": 11,
+            "C": 9,
+            "D": 13,
+            "E": 6
+        },
+        "humanas": {
+            "A": 11,
+            "B": 14,
+            "C": 6,
+            "D": 5,
+            "E": 9
+        },
+        "natureza": {
+            "A": 6,
+            "B": 13,
+            "C": 10,
+            "D": 9,
+            "E": 7
+        },
+        "matematica": {
+            "A": 6,
+            "B": 8,
+            "C": 11,
+            "D": 10,
+            "E": 9
+        }
+    },
+    "2020": {
+        "linguagens": {
+            "A": 17,
+            "B": 9,
+            "C": 6,
+            "D": 8,
+            "E": 10
+        },
+        "humanas": {
+            "A": 4,
+            "B": 9,
+            "C": 11,
+            "D": 12,
+            "E": 9
+        },
+        "natureza": {
+            "A": 6,
+            "B": 5,
+            "C": 11,
+            "D": 16,
+            "E": 6
+        },
+        "matematica": {
+            "A": 8,
+            "B": 10,
+            "C": 15,
+            "D": 5,
+            "E": 6
+        }
+    },
+    "2019": {
+        "linguagens": {
+            "A": 11,
+            "B": 11,
+            "C": 10,
+            "D": 10,
+            "E": 8
+        },
+        "humanas": {
+            "A": 9,
+            "B": 13,
+            "C": 11,
+            "D": 6,
+            "E": 6
+        },
+        "natureza": {
+            "A": 9,
+            "B": 9,
+            "C": 9,
+            "D": 9,
+            "E": 9
+        },
+        "matematica": {
+            "A": 8,
+            "B": 8,
+            "C": 10,
+            "D": 10,
+            "E": 9
+        }
+    },
+    "2018": {
+        "linguagens": {
+            "A": 8,
+            "B": 15,
+            "C": 9,
+            "D": 9,
+            "E": 9
+        },
+        "humanas": {
+            "A": 4,
+            "B": 9,
+            "C": 9,
+            "D": 9,
+            "E": 14
+        },
+        "natureza": {
+            "A": 9,
+            "B": 9,
+            "C": 9,
+            "D": 9,
+            "E": 9
+        },
+        "matematica": {
+            "A": 10,
+            "B": 9,
+            "C": 8,
+            "D": 10,
+            "E": 7
+        }
+    },
+    "2017": {
+        "linguagens": {
+            "A": 9,
+            "B": 11,
+            "C": 6,
+            "D": 13,
+            "E": 11
+        },
+        "humanas": {
+            "A": 8,
+            "B": 9,
+            "C": 8,
+            "D": 10,
+            "E": 10
+        },
+        "natureza": {
+            "A": 10,
+            "B": 8,
+            "C": 9,
+            "D": 9,
+            "E": 9
+        },
+        "matematica": {
+            "A": 8,
+            "B": 10,
+            "C": 9,
+            "D": 10,
+            "E": 8
+        }
+    },
+    "2016": {
+        "linguagens": {
+            "A": 8,
+            "B": 8,
+            "C": 11,
+            "D": 11,
+            "E": 7
+        },
+        "humanas": {
+            "A": 8,
+            "B": 10,
+            "C": 10,
+            "D": 9,
+            "E": 8
+        },
+        "natureza": {
+            "A": 10,
+            "B": 14,
+            "C": 9,
+            "D": 7,
+            "E": 10
+        },
+        "matematica": {
+            "A": 8,
+            "B": 9,
+            "C": 10,
+            "D": 10,
+            "E": 8
+        }
+    },
+    "2015": {
+        "linguagens": {
+            "A": 8,
+            "B": 11,
+            "C": 10,
+            "D": 11,
+            "E": 10
+        },
+        "humanas": {
+            "A": 9,
+            "B": 9,
+            "C": 9,
+            "D": 8,
+            "E": 10
+        },
+        "natureza": {
+            "A": 9,
+            "B": 9,
+            "C": 9,
+            "D": 9,
+            "E": 9
+        },
+        "matematica": {
+            "A": 9,
+            "B": 8,
+            "C": 10,
+            "D": 9,
+            "E": 9
+        }
     }
+}
 
-    lista = []
-    listaNomes = ["Linguagens", "Humanas", "Natureza", "Matematica"]
+constantes = {
+    'linguagens': {'A': 113, 'B': 115, 'C': 104, 'D': 115, 'E': 98}, 
+    'humanas': {'A': 95, 'B': 108, 'C': 98, 'D': 95, 'E': 99}, 
+    'natureza': {'A': 93, 'B': 102, 'C': 102, 'D': 106, 'E': 93}, 
+    'matematica': {'A': 89, 'B': 99, 'C': 114, 'D': 99, 'E': 88}
+}
 
-    for x in listaNomes:
-        blocoAssunto["respostas"]["A"] = 0
-        blocoAssunto["respostas"]["B"] = 0
-        blocoAssunto["respostas"]["C"] = 0
-        blocoAssunto["respostas"]["D"] = 0
-        blocoAssunto["respostas"]["E"] = 0
-        blocoAssunto["quantidadeRespostas"] = 0
-        blocoAssunto["nome"] = x
-        print(blocoAssunto["nome"])
+somas = {'linguagens': 545, 'humanas': 495, 'natureza': 496, 'matematica': 489}
 
-        Respostas = input("Liste de respostas, separdas por virgula: ")
-        if Respostas == " " or Respostas == "":
-            print("Campo vazio. Resgistro invalido. Digite novamente.")
-            Respostas = input("Liste os acordes, separdos por virgula: ")
 
-        #Transforma a string em lista
-        Respostas = Respostas.split(" ")
-        
-        for z in Respostas:
-            if z in blocoAssunto["respostas"]:
-                blocoAssunto["respostas"][f"{z}"] += 1
-                blocoAssunto["quantidadeRespostas"] += 1
-        lista.append(blocoAssunto)
-        
-        print(f"> Lista complimento das músicas: {blocoAssunto["quantidadeRespostas"]}") 
+print(f"Linguagens: A ({(113*100)/545}%) | B ({(115*100)/545}%) | C ({(104*100)/545}%) | D ({(115*100)/545}%) | E ({(98*100)/545}%)")
+print(f"Humanas: A ({(95*100)/495}%) | B ({(108*100)/495}%) | C ({(98*100)/495}%) | D ({(95*100)/495}%) | E ({(99*100)/495}%)")
+print(f"Natureza: A ({(93*100)/496}%) | B ({(102*100)/496}%) | C ({(102*100)/496}%) | D ({(106*100)/496}%) | E ({(93*100)/496}%)")
+print(f"Matematica: A ({(89*100)/489}%) | B ({(99*100)/489}%) | C ({(114*100)/489}%) | D ({(99*100)/489}%) | E ({(88*100)/489}%)")
 
-    return lista
-    
-
-listaRespostas = []
-sistema = True
-
-print("---------------------------------\n| Sistema de Contagem de Acorde |\n---------------------------------")
-while sistema:
-    print("- Tecle 1 para registrar respostas\n- Tecle 2 para visualizar registros\n- Tecle F para finalizar sistema")
-    usuario = input("> ")
-    match usuario.lower():
-        case "1":
-            ano = int(input("Ano de edição do ENEM: "))
-            registro = Contagem(ano)
-            listaRespostas.append(registro)
-
-        case "f":
-            sistema = False
-            print("| Sistema de contagem finalizado |")
-            print(listaRespostas)
-
-        case _:
-            print("Resposta invalida. Tente novamente.")
-            print(" ")
-
-cont = []
+"""
+# Maiores chanches de resposta certa
+Linguagens: A (20.73394495412844%) | B (21.10091743119266%) | C (19.08256880733945%) | D (21.10091743119266%) | E (17.98165137614679%) -> B ou D
+Humanas: A (19.19191919191919%) | B (21.818181818181817%) | C (19.7979797979798%) | D (19.19191919191919%) | E (20.0%) -> B
+Natureza: A (18.75%) | B (20.56451612903226%) | C (20.56451612903226%) | D (21.370967741935484%) | E (18.75%) -> D
+Matematica: A (18.20040899795501%) | B (20.245398773006134%) | C (23.312883435582823%) | D (20.245398773006134%) | E (17.995910020449898%) -> C
+"""
